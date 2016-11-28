@@ -18,6 +18,7 @@ BuildRequires:	pkgconfig(librevenge-0.0)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(icu-uc)
 BuildRequires:	pkgconfig(zlib)
+BuildRequires:	pkgconfig(cppunit)
 BuildRequires:	boost-devel
 
 %description
