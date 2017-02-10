@@ -53,7 +53,7 @@ Includes and definitions for developing with libzmf.
 %build
 CFLAGS="%{optflags} -Qunused-arguments" \
 CXXFLAGS="%{optflags} -Qunused-arguments" \
-%configure
+%configure --disable-werror
 %make 
 
 %install
