@@ -7,7 +7,7 @@ Summary:	Library for importing and converting Zoner Callisto/Draw 4 and 5 images
 Name:		libzmf
 Epoch:		1
 Version:	0.0.1
-Release:	1
+Release:	2
 Group:		Office
 License:	LGPLv2+
 Url:		https://wiki.documentfoundation.org/DLP/Libraries/libzmf
