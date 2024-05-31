@@ -1,12 +1,13 @@
 %define api	0.0
 %define major	0
-%define libname	%mklibname zmf %{api} %{major}
+%define oldlibname	%mklibname zmf %{api} %{major}
+%define libname	%mklibname zmf
 %define devname	%mklibname -d zmf
 
 Summary:	Library for importing and converting Zoner Callisto/Draw 4 and 5 images
 Name:		libzmf
 Version:	0.0.2
-Release:	8
+Release:	9
 Group:		Office
 License:	LGPLv2+
 Url:		https://wiki.documentfoundation.org/DLP/Libraries/libzmf
@@ -34,6 +35,7 @@ Currently supported: raw svg
 %package -n %{libname}
 Summary:	Library for importing and converting Zoner Callisto/Draw images
 Group:		System/Libraries
+%rename %{oldlibname}
 
 %description -n %{libname}
 libzmf is a library for reading and converting ZMF images
