@@ -13,6 +13,11 @@ License:	LGPLv2+
 Url:		https://wiki.documentfoundation.org/DLP/Libraries/libzmf
 Source0:	http://dev-www.libreoffice.org/src/%{name}/%{name}-%{version}.tar.xz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig(librevenge-0.0)
 BuildRequires:	pkgconfig(libpng)
