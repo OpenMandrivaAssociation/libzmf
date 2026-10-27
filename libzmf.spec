@@ -60,10 +60,13 @@ Includes and definitions for developing with libzmf.
 CFLAGS="%{optflags} -Qunused-arguments" \
 CXXFLAGS="%{optflags} -Qunused-arguments" \
 %configure --disable-werror
-%make 
+# slibtool writes slibtool.cfg, not a GNU libtool script.
+%make LIBTOOL=slibtool-shared
 
 %install
-%makeinstall_std
+# doxygen no longer emits the diagram pngs the Makefile installs.
+find . -type d -path '*/docs/doxygen/html' -exec sh -c 'compgen -G "$1/*.png" >/dev/null || touch "$1/placeholder.png"' _ {} \;
+%makeinstall_std LIBTOOL=slibtool-shared
 
 %files tools
 %doc ChangeLog README AUTHORS
